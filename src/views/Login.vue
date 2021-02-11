@@ -6,7 +6,7 @@
       <div class="form">
         <input placeholder="メールアドレス" type="email" />
         <input placeholder="パスワード" type="password" />
-        <button @click="$router.push('/home')>ログイン</button>
+        <button @click="$router.push('/home')">ログイン</button>
       </div>
     </div>
   </div>
