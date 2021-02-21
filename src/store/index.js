@@ -28,13 +28,13 @@ export default new Vuex.Store({
   },
   actions: {
     async login({ commit }, { email, password }) {
-      const responseLogin = await axios.post("http://desolate-refuge-61297.herokuapp.com/api/login",
+      const responseLogin = await axios.post("https://desolate-refuge-61297.herokuapp.com/api/login",
         {
           email: email,
           password: password,
         }
       );
-      const responseUser = await axios.get("http://desolate-refuge-61297.herokuapp.com/api/user",
+      const responseUser = await axios.get("https://desolate-refuge-61297.herokuapp.com/api/user",
         {
           param: {
             email: email,
@@ -47,7 +47,7 @@ export default new Vuex.Store({
     },
     logout({ commit }) {
       axios
-        .post("http://desolate-refuge-61297.herokuapp.com/api/logout", {
+        .post("https://desolate-refuge-61297.herokuapp.com/api/logout", {
           auth: this.state.auth,
         })
         .then((response) => {

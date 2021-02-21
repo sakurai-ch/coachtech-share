@@ -32,7 +32,7 @@ export default {
   mathods: {
     auth(){
       axios
-        .post("http://desolate-refuge-61297.herokuapp.com/api/register", {
+        .post("https://desolate-refuge-61297.herokuapp.com/api/register", {
           name: this.name,
           profile: this.profile,
           email: this.email,

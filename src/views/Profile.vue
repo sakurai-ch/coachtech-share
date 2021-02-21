@@ -39,7 +39,7 @@ export default {
     edit() {
       if (!this.active) {
         axios
-          .put("http://desolate-refuge-61297.herokuapp.com/api/user", {
+          .put("https://desolate-refuge-61297.herokuapp.com/api/user", {
             email: this.$store.state.user.email,
             profile: this.profile,
           })

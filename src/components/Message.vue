@@ -58,7 +58,7 @@ export default {
           if(element.user_id == this.$store.state.user.id) {
             axios({
               method: "delete",
-              url: "http://desolate-refuge-61297.herokuapp.com/api/like",
+              url: "https://desolate-refuge-61297.herokuapp.com/api/like",
               data: {
                 share_id: this.shares[index].item.id,
                 user_id: this.$store.state.user.id,
@@ -74,7 +74,7 @@ export default {
         });
       }else {
         axios
-          .post("http://desolate-refuge-61297.herokuapp.com/api/like", {
+          .post("https://desolate-refuge-61297.herokuapp.com/api/like", {
             share_id: this.shares[index].item.id,
             user_id: this.$store.state.user.id,
           })
@@ -91,7 +91,7 @@ export default {
     del(index) {
       axios
         .delete(
-          "http://desolate-refuge-61297.herokuapp.com/api/shares" + this.shares[index].item.id
+          "https://desolate-refuge-61297.herokuapp.com/api/shares" + this.shares[index].item.id
         )
         .then((response) => {
           console.log(response);
@@ -105,11 +105,11 @@ export default {
     async getShares() {
       let data = [];
       const shares = await axios.get(
-        "http://desolate-refuge-61297.herokuapp.com/api/shares"
+        "https://desolate-refuge-61297.herokuapp.com/api/shares"
       );
       for ( let i = 0; i < shares.data.data.length; i++ ){
         await axios
-          .get("http://desolate-refuge-61297.herokuapp.com/api/shares/" + shares.data.data[i].id
+          .get("https://desolate-refuge-61297.herokuapp.com/api/shares/" + shares.data.data[i].id
           )
           .then((response) => {
             if(this.$route.name == "profile") {
