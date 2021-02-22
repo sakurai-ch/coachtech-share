@@ -51,11 +51,11 @@ export default {
           content: this.content,
         })
         .then((response) => {
-          console.log(response),
-          this.content = "",
+          console.log(response);
+          this.content = "";
           this.$router.go({
             path: this.$router.currentRoute.path,
-            forse: true,
+            force: true,
           });
         });
     },
@@ -99,6 +99,9 @@ export default {
 .title p {
   font-size: 20px;
   font-weight: bold;
+}
+.share-message {
+  border-bottom: 1px solid white;
 }
 .comment-title {
   text-align: center;

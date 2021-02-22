@@ -135,7 +135,7 @@ export default {
       this.path = false;
     }
     if(this.$route.name === "detail"){
-      this.path = false;
+      this.profile = false;
     }
     this.getShares();
   },
