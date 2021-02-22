@@ -91,7 +91,7 @@ export default {
     del(index) {
       axios
         .delete(
-          "https://desolate-refuge-61297.herokuapp.com/api/shares" + this.shares[index].item.id
+          "https://desolate-refuge-61297.herokuapp.com/api/shares/" + this.shares[index].item.id
         )
         .then((response) => {
           console.log(response);
@@ -131,13 +131,13 @@ export default {
   },
 
   created() {
-    if(this.route.name === "home"){
+    if(this.$route.name === "home"){
       this.path = false;
     }
-    if(this.route.name === "detail"){
+    if(this.$route.name === "detail"){
       this.path = false;
     }
-    this.getsheares();
+    this.getShares();
   },
 };
 </script>

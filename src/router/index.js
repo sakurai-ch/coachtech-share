@@ -25,7 +25,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      requestAuth: true,
+      requiesAuth: true,
     },
   },
   {
@@ -33,7 +33,7 @@ const routes = [
     name: 'detail',
     component: Detail,
     meta: {
-      requestAuth: true,
+      requiesAuth: true,
     },
     props: true,
   },
@@ -53,7 +53,7 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeEach((to, frome, next) => {
+router.beforeEach((to, from, next) => {
   if (
     to.matched.some((record) => record.meta.requiresAuth &&
       !store.state.auth)

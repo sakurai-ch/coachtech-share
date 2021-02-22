@@ -29,7 +29,7 @@ export default {
   components: {
     HeaderAuth
   },
-  mathods: {
+  methods: {
     auth(){
       axios
         .post("https://desolate-refuge-61297.herokuapp.com/api/register", {
@@ -42,7 +42,7 @@ export default {
           console.log(response);
           this.$router.replace("/");
         })
-        .chach(error => {
+        .catch(error => {
           alert(error);
         });
     },

@@ -61,7 +61,7 @@ export default {
     },
     comment() {
       axios
-        .get("https://desolate-refuge-61297.herokuapp.com/api/share" + this.id)
+        .get("https://desolate-refuge-61297.herokuapp.com/api/shares/" + this.id)
         .then((response) => {
           this.data = response.data.comment;
         });

@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       active: true,
-      name: this.$store.stste.user.name,
+      name: this.$store.state.user.name,
       profile: this.$store.state.user.profile,
     };
   },
@@ -103,5 +103,8 @@ button {
   border-radius: 25px;
   display: block;
   margin: 0 0 0 auto;
+}
+input {
+  color: black;
 }
 </style>

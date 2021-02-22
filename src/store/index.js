@@ -36,7 +36,7 @@ export default new Vuex.Store({
       );
       const responseUser = await axios.get("https://desolate-refuge-61297.herokuapp.com/api/user",
         {
-          param: {
+          params: {
             email: email,
           },
         }
@@ -52,7 +52,7 @@ export default new Vuex.Store({
         })
         .then((response) => {
           console.log(response);
-          commit("ligout", response.data.auth);
+          commit("logout", response.data.auth);
           router.replace("/");
         })
         .catch((error) => {
