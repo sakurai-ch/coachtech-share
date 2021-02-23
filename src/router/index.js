@@ -25,7 +25,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      requiesAuth: true,
+      requiresAuth: true,
     },
   },
   {
@@ -33,7 +33,7 @@ const routes = [
     name: 'detail',
     component: Detail,
     meta: {
-      requiesAuth: true,
+      requiresAuth: true,
     },
     props: true,
   },
@@ -42,7 +42,7 @@ const routes = [
     name: 'profile',
     component: Profile,
     meta: {
-      requestAuth: true,
+      requiresAuth: true,
     },
   },
 ]
